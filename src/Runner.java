@@ -4,25 +4,27 @@ import java.sql.SQLSyntaxErrorException;
 
 public class Runner {
     public static void main(String[] args) {
-        Tortoise shell = new Tortoise("Russian Tortoise", 18, 78);
-        Tortoise tony = new Tortoise("Red-Footed Tortoise", 54);
-        Tortoise bill = new Tortoise();
+        Tortoise shell = new Tortoise(18, 78);
+        Tortoise tony = new Tortoise(34, 54, "Blue");
+        Tortoise toby = new Tortoise(4, 1, "Black");
 
-        System.out.println(shell);
-        System.out.println(tony);
+        shell.makeNoise();
+        Tortoise[] torts = {shell, tony, toby};
 
-        bill.setAge(46);
-        System.out.println(bill);
+        for (Tortoise tort:torts) {
+            System.out.println(tort);
+            tort.makeNoise();
+            System.out.println("-------------");
+        }
 
-        Tortoise.makeNoise();
 
+        //Tortoise tilly = new Tortoise("Cool", 12, 12);
+        //Tortoise ted = new Tortoise("Uncool", 13, 13);
+        //Tortoise toby = new Tortoise("Very cool", 130, 15);
 
-        Tortoise tilly = new Tortoise("Cool", 12, 12);
-        Tortoise ted = new Tortoise("Uncool", 13, 13);
-        Tortoise toby = new Tortoise("Very cool", 130, 15);
+        //Tortoise[] torts = {tilly, ted, toby};
 
-        Tortoise[] torts = {tilly, ted, toby};
-
+        /*
         for (int i = 0; i < torts.length; i++) {
             System.out.println(torts[i]);
         }
@@ -58,7 +60,7 @@ public class Runner {
 
         System.out.println("INLINE --> " + sbAns.delete(5,15));
         System.out.println(sbAns);
-
+    */
         
 
     }

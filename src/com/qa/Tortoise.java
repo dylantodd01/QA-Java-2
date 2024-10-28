@@ -1,61 +1,30 @@
 package com.qa;
 
-public class Tortoise {
+public class Tortoise extends Animal{
 
-    private String species;
-    private int weight;
-    private int age;
+    private String shellColour;
+
 
     // All args constructor
-    public Tortoise(String species, int weight, int age) {
-        this.species = species;
-        this.weight = weight;
-        this.age = age;
+    public Tortoise(int weight, int age, String shellColour) {
+        super(weight, age);
+        this.shellColour = shellColour;
+
     }
-
-    // No args constructor
-    public Tortoise() {}
-
-    public Tortoise(String species, int age) {
-        this(species, 15, age);
+    // Some args constructor
+    public Tortoise(int weight, int age) {
+        super();
+        this.shellColour = "Brown";
     }
-
-    public static void makeNoise() {
-        System.out.println("Squeak");
-    }
-
-    public String getSpecies() {
-        return species;
-    }
-
-    public void setSpecies(String species) {
-        this.species = species;
-    }
-
-    public int getWeight() {
-        return weight;
-    }
-
-    public void setWeight(int weight) {
-        this.weight = weight;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-
 
     @Override
     public String toString() {
-        return "Tortoise{" +
-                "species='" + species + '\'' +
-                ", weight=" + weight +
-                ", age=" + age +
+        return "Tortoise{" + super.toString() +
+                ", shellColour='" + shellColour + '\'' +
                 '}';
+    }
+
+    public void makeNoise() {
+        System.out.println("Squeak");
     }
 }
