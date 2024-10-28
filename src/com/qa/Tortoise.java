@@ -7,13 +7,15 @@ public class Tortoise extends Animal{
 
     // All args constructor
     public Tortoise(int weight, int age, String shellColour) {
-        super(weight, age);
+        this.weight = weight;
+        this.age = age;
         this.shellColour = shellColour;
 
     }
     // Some args constructor
     public Tortoise(int weight, int age) {
-        super();
+        this.weight = weight;
+        this.age = age;
         this.shellColour = "Brown";
     }
 

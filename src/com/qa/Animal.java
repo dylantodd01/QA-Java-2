@@ -1,18 +1,9 @@
 package com.qa;
 
-public class Animal {
+public abstract class Animal {
 
-    private int weight;
-    private int age;
-
-    // All args constructor
-    public Animal(int weight, int age) {
-        this.weight = weight;
-        this.age = age;
-    }
-
-    // No args constructor
-    public Animal() {}
+    int weight;
+    int age;
 
     public int getWeight() {
         return weight;

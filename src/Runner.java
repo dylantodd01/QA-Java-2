@@ -1,3 +1,6 @@
+import com.qa.Animal;
+import com.qa.AnimalActions;
+import com.qa.Pigeon;
 import com.qa.Tortoise;
 
 import java.sql.SQLSyntaxErrorException;
@@ -9,13 +12,25 @@ public class Runner {
         Tortoise toby = new Tortoise(4, 1, "Black");
 
         shell.makeNoise();
-        Tortoise[] torts = {shell, tony, toby};
+        Animal[] torts = {shell, tony, toby};
 
-        for (Tortoise tort:torts) {
+        for (Animal tort:torts) {
             System.out.println(tort);
             tort.makeNoise();
             System.out.println("-------------");
         }
+
+        Pigeon pigey = new Pigeon(3, 4);
+        Pigeon podge = new Pigeon(1, 3);
+        AnimalActions[] birds = {pigey, podge};
+
+        for (AnimalActions bird:birds) {
+            System.out.println(bird);
+        }
+
+        pigey.makeNoise();
+        pigey.sleepTime();
+        System.out.println(pigey.getAge());
 
 
         //Tortoise tilly = new Tortoise("Cool", 12, 12);
